@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 $host = "localhost";
 $username = "root";
@@ -24,17 +23,15 @@ if(isset($_POST['apply']))
     $message = $_POST['message'];
 
 
-    $sql="INSERT INTO `admission` (`id`, `name`, `email`, `phone`, `message`) VALUES ('$name', '$email', '$phone', '$message');";
+    $sql="INSERT INTO admission (name, email, phone,message) VALUES ('$name', '$email', '$phone', '$message')";
 
 
-    $result = mysql_query($data, $sql);
+    $result = mysqli_query($data, $sql);
 
     if($result){
-        $_SESSION ['message'] ="your application sent successfully.";
-
-        header("location:index.php");
+        echo "successfully added";
     }
     else{
-        $_SESSION ['message'] ="your application falied to proceed.";
+        echo "failed to add admission";
     }
 }

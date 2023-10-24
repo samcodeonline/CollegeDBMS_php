@@ -141,7 +141,7 @@
             </div>
             <div class="adminInt">
                 <label class="LabelText" for="">Message</label>
-                <input type="text" value="message" class="inputDesign" name="message">
+                <input type="text" class="inputDesign" name="message">
                
             </div>
             <div class="adminInt">
