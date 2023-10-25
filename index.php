@@ -133,7 +133,7 @@
             </div>
             <div class="adminInt">
                 <label class="LabelText" for="">Email</label>
-                <input class="inputDesign" type="text" name="email">
+                <input class="inputDesign" type="email" name="email">
             </div>
             <div class="adminInt"> 
                 <label class="LabelText" for="">Phone</label>

@@ -20,16 +20,18 @@ if(isset($_POST['apply']))
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
-   
 
 
-    $sql = "INSERT INTO 'admission' (name, email, phone, message) VALUES ('$name','$email',)";
+    $sql = "INSERT INTO admission (name, email, phone, message) VALUES ('$name','$email','$phone', '$message')";
 
+    $addData = mysqli_query($data, $sql);
 
-    if($sql === TRUE){
+    if($addData){
         echo "successfully added";
     }
     else{
         echo "failed to add admission";
     }
+
+
 }
